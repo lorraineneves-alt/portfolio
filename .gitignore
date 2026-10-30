@@ -1,0 +1,12 @@
+.DS_Store
+._*
+.env
+.env.*
+*.log
+node_modules/
+.idea/
+.vscode/
+
+# Notas e referências locais de criação.
+assets/reliquary/*.prompt.md
+assets/extras/illustration-prompts.json

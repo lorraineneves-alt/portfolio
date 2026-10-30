@@ -1,0 +1,374 @@
+/* The entrance is a single keepsake, framed in glass and polished silver. */
+.portfolio-chrome-star {
+  display: block;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  filter: drop-shadow(1px 2px 1.5px rgba(18, 16, 24, .24));
+}
+
+body.is-home-page {
+  color-scheme: dark;
+  color: #f0eaf4;
+  background: #0d0b10;
+}
+
+body.is-home-page .site-shell > .topbar { display: none; }
+body.is-home-page .canvas {
+  display: block;
+  width: 100%;
+  min-height: 100svh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  touch-action: auto;
+}
+body.is-home-page .canvas::before,
+body.is-home-page .canvas > :not(#homeView) { display: none !important; }
+body.is-home-page .home-view { display: block; }
+
+.reliquary-entry {
+  --reliquary-rotate-x: 0deg;
+  --reliquary-rotate-y: -5deg;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
+  padding: 26px clamp(22px, 4.5vw, 72px) 22px;
+  overflow: hidden;
+  color: #f0eaf4;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(118, 77, 151, .19), transparent 38%),
+    radial-gradient(ellipse at 3% 0%, rgba(151, 135, 169, .075), transparent 33%),
+    linear-gradient(130deg, #17141b, #0d0b10 52%, #100d15);
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+.reliquary-entry::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12%;
+  border: 1px solid rgba(220, 200, 240, .025);
+  border-radius: 50%;
+  content: "";
+  transform: rotate(-24deg) scaleX(1.45);
+  pointer-events: none;
+}
+.reliquary-masthead,
+.reliquary-footer {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reliquary-wordmark {
+  position: relative;
+  display: block;
+  width: 136px;
+  height: 42px;
+  text-decoration: none;
+}
+.reliquary-wordmark::before,
+.reliquary-wordmark .brand-logo-crop {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 95px;
+  height: 65px;
+  transform: translateY(-50%);
+}
+.reliquary-wordmark::before { content: ""; }
+.reliquary-wordmark:focus-visible { outline: none; }
+.reliquary-wordmark:focus-visible::before {
+  border-radius: 14px;
+  outline: 3px solid #e7b5f5;
+  outline-offset: 2px;
+}
+.reliquary-wordmark .brand-logo-crop {
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+.reliquary-wordmark .brand-logo {
+  position: absolute;
+  top: -20.4px;
+  left: -3.1px;
+  display: block;
+  width: 100.2px;
+  height: 100.2px;
+  max-width: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.reliquary-skip {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  gap: 18px;
+  padding: 0 17px;
+  border: 1px solid rgba(220, 200, 235, .18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .015);
+  color: #ccc0d6;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.reliquary-skip > span { color: #d5c2e9; font-size: 17px; }
+.reliquary-skip:hover { border-color: #8b739c; background: rgba(202, 168, 233, .07); color: #fff; }
+.reliquary-entry button:focus-visible,
+.reliquary-entry a:focus-visible { outline: 2px solid #cfb4e9; outline-offset: 5px; }
+.reliquary-center {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 22px;
+}
+.reliquary-stage {
+  position: relative;
+  display: grid;
+  width: min(760px, 92vw);
+  height: min(650px, 72svh);
+  place-items: center;
+  perspective: 2600px;
+  animation: reliquary-enter 1.1s ease both;
+}
+.reliquary-aura {
+  position: absolute;
+  top: 22%;
+  left: 19%;
+  width: 62%;
+  height: 69%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(147, 99, 186, .21), rgba(107, 69, 142, .055) 48%, transparent 72%);
+  filter: blur(22px);
+  pointer-events: none;
+  transition: transform .8s, opacity .8s;
+}
+.reliquary-ground {
+  position: absolute;
+  right: 26%;
+  bottom: 0;
+  left: 26%;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .55);
+  filter: blur(15px);
+  pointer-events: none;
+}
+.reliquary-float {
+  position: relative;
+  z-index: 1;
+  width: min(560px, 76vw, 68svh);
+  animation: reliquary-float 6.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+.reliquary-tilt {
+  transform: rotateX(var(--reliquary-rotate-x)) rotateY(var(--reliquary-rotate-y));
+  transform-style: preserve-3d;
+  transition: transform .22s ease-out;
+}
+.reliquary-object {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 640 / 690;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 43%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transform: translateX(0) scale(1);
+  transform-style: preserve-3d;
+  transition: transform .95s cubic-bezier(.22,.65,.22,1);
+}
+.reliquary-object::before {
+  position: absolute;
+  inset: 0;
+  border-radius: 22%;
+  content: "";
+}
+.reliquary-object:focus-visible { outline: none !important; }
+.reliquary-object:focus-visible::before { outline: 2px solid #cfb4e9; outline-offset: 12px; }
+.reliquary-object:disabled { cursor: default; }
+.reliquary-back,
+.reliquary-lid,
+.reliquary-lid > svg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.reliquary-back { transform: translateZ(0); }
+.reliquary-chain {
+  filter: drop-shadow(1px 3px 1.5px rgba(0, 0, 0, .48));
+  pointer-events: none;
+}
+/* The clear targets also cover the chain above the button's layout box. */
+.reliquary-hit-area > * { pointer-events: all; cursor: pointer; }
+.reliquary-hit-area .reliquary-chain-hit { pointer-events: stroke; }
+.reliquary-object:disabled .reliquary-hit-area > * { pointer-events: none; cursor: default; }
+.reliquary-lid {
+  transform: translateZ(4px) rotateY(0deg);
+  transform-origin: 13% 49%;
+  transform-style: preserve-3d;
+  transition: transform .95s cubic-bezier(.22,.65,.22,1);
+}
+.reliquary-lid > svg { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.reliquary-lid-front { transform: translateZ(.5px); }
+.reliquary-lid-inside { transform: rotateY(180deg) translateZ(.5px); }
+.reliquary-glass-reflections { opacity: .72; transition: opacity .4s; }
+.reliquary-object:hover .reliquary-glass-reflections,
+.reliquary-object:focus-visible .reliquary-glass-reflections { opacity: 1; }
+.reliquary-star {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  overflow: visible;
+  pointer-events: none;
+  filter: drop-shadow(2px 5px 3px rgba(0, 0, 0, .46)) drop-shadow(0 -1px 2px rgba(223, 193, 249, .16));
+  animation: reliquary-glint 5s ease-in-out infinite;
+}
+.reliquary-star-one { top: 29%; left: 14%; width: 44px; transform: rotate(12deg); }
+.reliquary-star-two { top: 23%; right: 16%; width: 30px; transform: rotate(-9deg); animation-delay: -1.6s; }
+.reliquary-star-three { right: 11%; bottom: 25%; width: 58px; transform: rotate(8deg); animation-delay: -3s; }
+.reliquary-caption {
+  position: relative;
+  z-index: 2;
+  margin-top: -17px;
+  text-align: center;
+  animation: reliquary-enter 1.2s .12s ease both;
+  transition: opacity .3s;
+}
+.reliquary-caption-title {
+  display: block;
+  color: #e4d8ed;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(21px, 2.3vw, 28px);
+  font-style: italic;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+.reliquary-caption p {
+  margin: 12px 0 0;
+  color: #9786a6;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .055em;
+  line-height: 1.6;
+}
+.reliquary-caption p > span:last-child { margin-left: 5px; color: #c9addf; }
+.reliquary-touch-hint { display: none; }
+.reliquary-footer { min-height: 34px; padding-right: 150px; }
+.reliquary-footer nav { display: flex; align-items: center; gap: 15px; }
+.reliquary-footer nav > span { color: #63516f; }
+.reliquary-footer button {
+  min-height: 38px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #9b8aa9;
+  font-size: 10px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color .2s;
+}
+.reliquary-footer button:hover { color: #f0dfff; }
+.reliquary-footer-note { color: #65576f; font-size: 9px; font-weight: 400; letter-spacing: .05em; }
+.reliquary-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+}
+.reliquary-entry.is-opening .reliquary-float { animation-play-state: paused; }
+.reliquary-entry.is-opening .reliquary-object { transform: translateX(15%) scale(.82); }
+.reliquary-entry.is-opening .reliquary-lid { transform: translateZ(4px) rotateY(-118deg); }
+.reliquary-entry.is-opening .reliquary-caption { opacity: 0; }
+.reliquary-entry.is-opening .reliquary-aura { transform: scale(2.3); opacity: .8; }
+.about-view.is-reliquary-arrival,
+.work-view.is-reliquary-arrival { animation: reliquary-arrival .65s ease both; }
+body.is-home-page .play-chip {
+  z-index: 5;
+  right: clamp(22px, 4.5vw, 72px);
+  bottom: 23px;
+  min-height: 36px;
+  padding: 0 10px;
+  border-color: rgba(206, 183, 226, .16);
+  background: rgba(255, 255, 255, .025);
+  box-shadow: none;
+  color: #a993ba;
+  font-size: 10px;
+  font-weight: 400;
+}
+body.is-home-page .play-chip > span { color: #baa1d0; }
+@keyframes reliquary-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes reliquary-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes reliquary-glint { 0%, 100% { opacity: .86; } 50% { opacity: 1; } }
+@keyframes reliquary-arrival { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 600px) {
+  .reliquary-entry { padding: 22px 20px 18px; }
+  .reliquary-wordmark { width: 90px; height: 38px; }
+  .reliquary-wordmark::before,
+  .reliquary-wordmark .brand-logo-crop { width: 80px; height: 54px; }
+  .reliquary-wordmark .brand-logo { top: -17.2px; left: -2.6px; width: 84.4px; height: 84.4px; }
+  .reliquary-skip { min-height: 38px; gap: 9px; padding: 0 12px; font-size: 9px; }
+  .reliquary-skip > span { font-size: 15px; }
+  .reliquary-center { padding: 14px 0 24px; }
+  .reliquary-stage { width: calc(100vw - 16px); height: min(520px, 104vw, 64svh); }
+  .reliquary-float { width: min(470px, 91vw, 62svh); }
+  .reliquary-star-one { left: 7%; top: 24%; width: 30px; }
+  .reliquary-star-two { top: 19%; right: 9%; width: 23px; }
+  .reliquary-star-three { right: 3%; bottom: 19%; width: 40px; }
+  .reliquary-ground { right: 20%; left: 20%; }
+  .reliquary-caption { margin-top: -4px; }
+  .reliquary-caption-title { font-size: 23px; }
+  .reliquary-caption p { margin-top: 10px; font-size: 9px; }
+  .reliquary-footer { padding-right: 130px; }
+  .reliquary-footer-note { display: none; }
+  .reliquary-footer nav { gap: 11px; }
+  body.is-home-page .play-chip { right: 20px; bottom: 20px; font-size: 9px; }
+}
+@media (hover: none) {
+  .reliquary-desktop-hint { display: none; }
+  .reliquary-touch-hint { display: inline; }
+}
+@media (max-height: 580px) and (min-width: 601px) {
+  .reliquary-entry { padding-top: 16px; padding-bottom: 12px; }
+  .reliquary-center { padding: 0; }
+  .reliquary-stage { height: 66svh; }
+  .reliquary-float { width: min(560px, 76vw, 59svh); }
+  .reliquary-caption { margin-top: -24px; }
+  .reliquary-caption-title { font-size: 20px; }
+  .reliquary-caption p { margin-top: 6px; }
+  .reliquary-footer { min-height: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reliquary-entry *,
+  .reliquary-entry *::before,
+  .reliquary-entry *::after,
+  .about-view.is-reliquary-arrival,
+  .work-view.is-reliquary-arrival { animation: none !important; transition: none !important; }
+  .reliquary-tilt { transform: none; }
+}
