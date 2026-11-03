@@ -82,24 +82,15 @@ body.is-home-page .home-view { display: block; }
   outline-offset: 5px;
 }
 .brand-signature {
-  position: relative;
   display: block;
   width: 100%;
   aspect-ratio: 1190 / 392;
-  overflow: hidden;
-  mix-blend-mode: screen;
   pointer-events: none;
 }
-/* Frame the approved artwork and blend its dark background into the header. */
 .brand-signature img {
-  position: absolute;
-  top: -70.1531%;
-  left: -20.1681%;
   display: block;
-  width: 140.5042%;
+  width: 100%;
   height: auto;
-  max-width: none;
-  filter: brightness(.9) contrast(1.2);
   pointer-events: none;
   user-select: none;
   -webkit-user-drag: none;
