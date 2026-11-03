@@ -278,24 +278,33 @@ body.is-home-page .home-view { display: block; }
 .reliquary-caption-title {
   display: block;
   color: #f3eaf8;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 3.4vw, 44px);
+  font-family: inherit;
+  font-size: clamp(28px, 3vw, 36px);
   font-style: normal;
   font-weight: 400;
-  letter-spacing: -.04em;
-  line-height: 1.15;
+  letter-spacing: -.03em;
+  line-height: 1.25;
   text-wrap: balance;
 }
 .reliquary-caption p {
-  margin: 12px 0 0;
+  margin: 14px 0 0;
   color: #b9adc5;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: .005em;
+  letter-spacing: 0;
   line-height: 1.65;
   text-wrap: balance;
 }
-.reliquary-caption p > span:last-child { margin-left: 5px; color: #c9addf; }
+.reliquary-hint-ending { white-space: nowrap; }
+.reliquary-hint-icon {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-left: 4px;
+  overflow: visible;
+  color: #c8b6d5;
+  vertical-align: -.2em;
+}
 .reliquary-touch-hint { display: none; }
 .reliquary-footer { min-height: 34px; justify-content: flex-end; }
 .reliquary-footer-note { color: #a095ac; font-size: 11px; font-weight: 400; letter-spacing: .025em; line-height: 1.5; }
@@ -340,8 +349,9 @@ body.is-home-page .spotify-panel {
   .reliquary-sparkle-three { right: 3%; bottom: 19%; width: 18px; }
   .reliquary-ground { right: 20%; left: 20%; }
   .reliquary-caption { margin-top: -4px; }
-  .reliquary-caption-title { font-size: clamp(28px, 7vw, 34px); }
-  .reliquary-caption p { margin-top: 10px; font-size: 13px; }
+  .reliquary-caption-title { font-size: clamp(26px, 6.4vw, 30px); }
+  .reliquary-caption p { margin-top: 12px; }
+  .reliquary-hint-icon { width: 16px; height: 16px; }
   .reliquary-footer { display: none; }
 }
 @media (hover: none) {
@@ -354,7 +364,7 @@ body.is-home-page .spotify-panel {
   .reliquary-stage { height: 66svh; }
   .reliquary-float { width: min(560px, 76vw, 59svh); }
   .reliquary-caption { margin-top: -24px; }
-  .reliquary-caption-title { font-size: 28px; }
+  .reliquary-caption-title { font-size: 26px; }
   .reliquary-caption p { margin-top: 6px; }
   .reliquary-footer { min-height: 26px; }
 }
