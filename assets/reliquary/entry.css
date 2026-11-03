@@ -254,11 +254,11 @@ body.is-home-page .home-view { display: block; }
   pointer-events: none;
   user-select: none;
   filter: drop-shadow(0 0 5px rgba(223, 193, 249, .14));
-  animation: reliquary-glint 5s ease-in-out infinite;
+  animation: reliquary-float 6.5s ease-in-out infinite, reliquary-glint 5s ease-in-out infinite;
 }
 .reliquary-sparkle-one { top: 29%; left: 14%; width: 28px; }
-.reliquary-sparkle-two { top: 23%; right: 16%; width: 18px; animation-delay: -1.6s; }
-.reliquary-sparkle-three { right: 11%; bottom: 25%; width: 24px; animation-delay: -3s; }
+.reliquary-sparkle-two { top: 23%; right: 16%; width: 18px; animation-delay: 0s, -1.6s; }
+.reliquary-sparkle-three { right: 11%; bottom: 25%; width: 24px; animation-delay: 0s, -3s; }
 .reliquary-caption {
   position: relative;
   z-index: 2;
@@ -304,7 +304,8 @@ body.is-home-page .home-view { display: block; }
   clip-path: inset(50%) !important;
   white-space: nowrap !important;
 }
-.reliquary-entry.is-opening .reliquary-float { animation-play-state: paused; }
+.reliquary-entry.is-opening .reliquary-float,
+.reliquary-entry.is-opening .reliquary-sparkle { animation-play-state: paused; }
 .reliquary-entry.is-opening .reliquary-object { transform: translateX(15%) scale(.82); }
 .reliquary-entry.is-opening .reliquary-lid { transform: translateZ(4px) rotateY(-118deg); }
 .reliquary-entry.is-opening .reliquary-caption { opacity: 0; }
@@ -317,7 +318,7 @@ body.is-home-page .spotify-panel {
 }
 @keyframes reliquary-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes reliquary-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-@keyframes reliquary-glint { 0%, 100% { opacity: .86; } 50% { opacity: 1; } }
+@keyframes reliquary-glint { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 @keyframes reliquary-arrival { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 600px) {
