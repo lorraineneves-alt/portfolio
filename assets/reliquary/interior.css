@@ -166,8 +166,9 @@ body.is-about-page .about-content-card {
   box-shadow: none;
 }
 body.is-about-page .about-content-label { color: #bcb2c9; font-size: 11px; font-weight: 400; letter-spacing: .14em; text-transform: uppercase; }
-body.is-about-page .about-content-card h1 { margin: 10px 0 26px; color: #f4f2f6; font: 400 clamp(58px, 7vw, 88px)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.045em; }
-body.is-about-page .about-content-card h1::after { content: "."; color: #c6b2e6; }
+body.is-about-page .about-content-card h1 { width: min(420px, 100%); margin: 14px 0 30px; font: inherit; line-height: 1; letter-spacing: normal; }
+body.is-about-page .about-content-card h1::after { content: none; }
+body.is-about-page .about-name-signature { display: block; width: 100%; height: auto; user-select: none; -webkit-user-drag: none; }
 body.is-about-page .about-content-card p { max-width: 530px; color: var(--interior-soft); font-size: 17px; line-height: 1.75; }
 body.is-about-page .about-content-card p + p { margin-top: 20px; }
 body.is-about-page .about-content-card strong { color: #eeebf2; font-weight: 500; }
@@ -903,7 +904,7 @@ body.is-case-page .canvas-footer { display: none; }
   body.is-interior-page .top-actions .quiet-button { min-height: 38px; padding: 8px 10px; font-size: 12px; }
   body.is-about-page .about-view { padding-top: 46px; }
   body.is-about-page .about-layout { grid-template-columns: 1fr; gap: 38px; }
-  body.is-about-page .about-content-card h1 { font-size: 60px; margin-bottom: 22px; }
+  body.is-about-page .about-content-card h1 { width: min(320px, 100%); margin-bottom: 24px; }
   body.is-about-page .about-content-card p { font-size: 16px; }
   body.is-about-page .about-photo-card { width: 84%; max-width: 340px; justify-self: start; height: auto; }
   body.is-about-page .beliefs-card { margin-top: 86px; padding-top: 32px; }
@@ -924,7 +925,7 @@ body.is-case-page .canvas-footer { display: none; }
   body.is-interior-page .top-actions { justify-content: space-between; width: 100%; padding: 0; border: 0; }
   body.is-interior-page .top-actions .quiet-button { flex: 1; min-height: 42px; }
   body.is-about-page .about-view { padding-top: 38px; }
-  body.is-about-page .about-content-card h1 { font-size: 54px; }
+  body.is-about-page .about-content-card h1 { width: min(280px, 100%); }
   body.is-interior-page .interior-footer { flex-direction: column; }
 }
 
