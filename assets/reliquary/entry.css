@@ -47,6 +47,7 @@ body.is-home-page .home-view { display: block; }
     radial-gradient(ellipse at 3% 0%, rgba(151, 135, 169, .075), transparent 33%),
     linear-gradient(130deg, #17141b, #0d0b10 52%, #100d15);
   font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-kerning: normal;
 }
 .reliquary-entry::before {
   position: absolute;
@@ -107,16 +108,18 @@ body.is-home-page .home-view { display: block; }
 }
 .reliquary-skip {
   display: inline-flex;
-  min-height: 42px;
+  min-height: 44px;
   align-items: center;
   gap: 14px;
   padding: 0 17px;
   border: 1px solid rgba(220, 200, 235, .18);
   border-radius: 999px;
   background: rgba(255, 255, 255, .015);
-  color: #ccc0d6;
-  font-size: 11px;
+  color: #ded3e7;
+  font-size: 14px;
   font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 1.35;
   cursor: pointer;
   transition: border-color .2s, background .2s, color .2s;
 }
@@ -258,26 +261,31 @@ body.is-home-page .home-view { display: block; }
   position: relative;
   z-index: 2;
   margin-top: -17px;
+  max-width: 100%;
+  padding: 0 12px;
   text-align: center;
   animation: reliquary-enter 1.2s .12s ease both;
   transition: opacity .3s;
 }
 .reliquary-caption-title {
   display: block;
-  color: #e4d8ed;
+  color: #f3eaf8;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(21px, 2.3vw, 28px);
-  font-style: italic;
-  letter-spacing: -.025em;
-  line-height: 1.3;
+  font-size: clamp(32px, 3.4vw, 44px);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.04em;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 .reliquary-caption p {
   margin: 12px 0 0;
-  color: #9786a6;
-  font-size: 10px;
+  color: #b9adc5;
+  font-size: 14px;
   font-weight: 400;
-  letter-spacing: .055em;
-  line-height: 1.6;
+  letter-spacing: .005em;
+  line-height: 1.65;
+  text-wrap: balance;
 }
 .reliquary-caption p > span:last-child { margin-left: 5px; color: #c9addf; }
 .reliquary-touch-hint { display: none; }
@@ -289,14 +297,16 @@ body.is-home-page .home-view { display: block; }
   padding: 0;
   border: 0;
   background: transparent;
-  color: #9b8aa9;
-  font-size: 10px;
-  font-weight: 400;
+  color: #c1b3ce;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 1.4;
   cursor: pointer;
   transition: color .2s;
 }
 .reliquary-footer button:hover { color: #f0dfff; }
-.reliquary-footer-note { color: #65576f; font-size: 9px; font-weight: 400; letter-spacing: .05em; }
+.reliquary-footer-note { color: #a095ac; font-size: 11px; font-weight: 400; letter-spacing: .025em; line-height: 1.5; }
 .reliquary-sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -319,14 +329,16 @@ body.is-home-page .play-chip {
   z-index: 5;
   right: clamp(22px, 4.5vw, 72px);
   bottom: 23px;
-  min-height: 36px;
-  padding: 0 10px;
+  min-height: 40px;
+  padding: 0 12px;
   border-color: rgba(206, 183, 226, .16);
   background: rgba(255, 255, 255, .025);
   box-shadow: none;
-  color: #a993ba;
-  font-size: 10px;
-  font-weight: 400;
+  color: #c4b3d2;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  line-height: 1.35;
 }
 body.is-home-page .play-chip > span { color: #baa1d0; }
 @keyframes reliquary-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
@@ -340,7 +352,7 @@ body.is-home-page .play-chip > span { color: #baa1d0; }
   .reliquary-wordmark::before,
   .reliquary-wordmark .brand-logo-crop { width: 80px; height: 54px; }
   .reliquary-wordmark .brand-logo { top: -17.2px; left: -2.6px; width: 84.4px; height: 84.4px; }
-  .reliquary-skip { min-height: 38px; gap: 9px; padding: 0 12px; font-size: 9px; }
+  .reliquary-skip { min-height: 42px; gap: 9px; padding: 0 12px; font-size: 12px; }
   .reliquary-skip-icon { width: 18px; height: 18px; }
   .reliquary-center { padding: 14px 0 24px; }
   .reliquary-stage { width: calc(100vw - 16px); height: min(520px, 104vw, 64svh); }
@@ -350,12 +362,13 @@ body.is-home-page .play-chip > span { color: #baa1d0; }
   .reliquary-star-three { right: 3%; bottom: 19%; width: 40px; }
   .reliquary-ground { right: 20%; left: 20%; }
   .reliquary-caption { margin-top: -4px; }
-  .reliquary-caption-title { font-size: 23px; }
-  .reliquary-caption p { margin-top: 10px; font-size: 9px; }
+  .reliquary-caption-title { font-size: clamp(28px, 7vw, 34px); }
+  .reliquary-caption p { margin-top: 10px; font-size: 13px; }
   .reliquary-footer { padding-right: 130px; }
   .reliquary-footer-note { display: none; }
   .reliquary-footer nav { gap: 11px; }
-  body.is-home-page .play-chip { right: 20px; bottom: 20px; font-size: 9px; }
+  .reliquary-footer button { font-size: 12px; }
+  body.is-home-page .play-chip { right: 20px; bottom: 20px; font-size: 11px; }
 }
 @media (hover: none) {
   .reliquary-desktop-hint { display: none; }
@@ -367,7 +380,7 @@ body.is-home-page .play-chip > span { color: #baa1d0; }
   .reliquary-stage { height: 66svh; }
   .reliquary-float { width: min(560px, 76vw, 59svh); }
   .reliquary-caption { margin-top: -24px; }
-  .reliquary-caption-title { font-size: 20px; }
+  .reliquary-caption-title { font-size: 28px; }
   .reliquary-caption p { margin-top: 6px; }
   .reliquary-footer { min-height: 26px; }
 }
