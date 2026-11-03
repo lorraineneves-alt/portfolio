@@ -277,14 +277,16 @@ body.is-home-page .home-view { display: block; }
 }
 .reliquary-caption-title {
   display: block;
-  color: #f3eaf8;
-  font-family: inherit;
-  font-size: clamp(28px, 3vw, 36px);
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: -.03em;
-  line-height: 1.25;
-  text-wrap: balance;
+  width: min(460px, calc(100vw - 52px));
+  margin: 0 auto;
+}
+.reliquary-caption-title-art {
+  display: block;
+  width: 100%;
+  height: 64px;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 .reliquary-caption p {
   margin: 14px 0 0;
@@ -349,7 +351,8 @@ body.is-home-page .spotify-panel {
   .reliquary-sparkle-three { right: 3%; bottom: 19%; width: 18px; }
   .reliquary-ground { right: 20%; left: 20%; }
   .reliquary-caption { margin-top: -4px; }
-  .reliquary-caption-title { font-size: clamp(26px, 6.4vw, 30px); }
+  .reliquary-caption-title { width: min(360px, calc(100vw - 52px)); }
+  .reliquary-caption-title-art { height: 52px; }
   .reliquary-caption p { margin-top: 12px; }
   .reliquary-hint-icon { width: 16px; height: 16px; }
   .reliquary-footer { display: none; }
@@ -364,7 +367,7 @@ body.is-home-page .spotify-panel {
   .reliquary-stage { height: 66svh; }
   .reliquary-float { width: min(560px, 76vw, 59svh); }
   .reliquary-caption { margin-top: -24px; }
-  .reliquary-caption-title { font-size: 26px; }
+  .reliquary-caption-title-art { height: 48px; }
   .reliquary-caption p { margin-top: 6px; }
   .reliquary-footer { min-height: 26px; }
 }
