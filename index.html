@@ -3945,7 +3945,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="assets/reliquary/entry.css?v=20261103-reliquary-type-1">
+  <link rel="stylesheet" href="assets/reliquary/entry.css?v=20261103-clean-entry-1">
   <link rel="stylesheet" href="assets/reliquary/interior.css?v=20261030-mosaic-balanced-1">
 </head>
 <body class="is-home-page">
@@ -4226,11 +4226,6 @@
           </div>
 
           <footer class="reliquary-footer">
-            <nav aria-label="Explore o portfólio">
-              <button type="button" data-page="about">Sobre mim</button>
-              <span aria-hidden="true">·</span>
-              <button type="button" data-modal="extras">Extras</button>
-            </nav>
             <span class="reliquary-footer-note">feito de ideias e afeto</span>
           </footer>
           <span class="reliquary-sr-only" id="reliquaryStatus" role="status" aria-live="polite"></span>
@@ -5355,6 +5350,9 @@
     spotifyClose.addEventListener("click", () => setSpotifyPanelOpen(false));
     document.addEventListener("keydown", event => {
       if (event.key === "Escape" && !spotifyPanel.hidden) setSpotifyPanelOpen(false);
+    });
+    document.addEventListener("portfolio:pagechange", event => {
+      if (event.detail.page === "home" && !spotifyPanel.hidden) setSpotifyPanelOpen(false);
     });
     const canvas = document.getElementById("canvas");
     const desktopQuery = window.matchMedia("(min-width: 851px)");

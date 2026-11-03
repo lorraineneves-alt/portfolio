@@ -289,23 +289,7 @@ body.is-home-page .home-view { display: block; }
 }
 .reliquary-caption p > span:last-child { margin-left: 5px; color: #c9addf; }
 .reliquary-touch-hint { display: none; }
-.reliquary-footer { min-height: 34px; padding-right: 150px; }
-.reliquary-footer nav { display: flex; align-items: center; gap: 15px; }
-.reliquary-footer nav > span { color: #63516f; }
-.reliquary-footer button {
-  min-height: 38px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #c1b3ce;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: -.01em;
-  line-height: 1.4;
-  cursor: pointer;
-  transition: color .2s;
-}
-.reliquary-footer button:hover { color: #f0dfff; }
+.reliquary-footer { min-height: 34px; justify-content: flex-end; }
 .reliquary-footer-note { color: #a095ac; font-size: 11px; font-weight: 400; letter-spacing: .025em; line-height: 1.5; }
 .reliquary-sr-only {
   position: absolute !important;
@@ -325,22 +309,10 @@ body.is-home-page .home-view { display: block; }
 .reliquary-entry.is-opening .reliquary-aura { transform: scale(2.3); opacity: .8; }
 .about-view.is-reliquary-arrival,
 .work-view.is-reliquary-arrival { animation: reliquary-arrival .65s ease both; }
-body.is-home-page .play-chip {
-  z-index: 5;
-  right: clamp(22px, 4.5vw, 72px);
-  bottom: 23px;
-  min-height: 40px;
-  padding: 0 12px;
-  border-color: rgba(206, 183, 226, .16);
-  background: rgba(255, 255, 255, .025);
-  box-shadow: none;
-  color: #c4b3d2;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: -.01em;
-  line-height: 1.35;
+body.is-home-page .play-chip,
+body.is-home-page .spotify-panel {
+  display: none;
 }
-body.is-home-page .play-chip > span { color: #baa1d0; }
 @keyframes reliquary-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes reliquary-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 @keyframes reliquary-glint { 0%, 100% { opacity: .86; } 50% { opacity: 1; } }
@@ -364,11 +336,7 @@ body.is-home-page .play-chip > span { color: #baa1d0; }
   .reliquary-caption { margin-top: -4px; }
   .reliquary-caption-title { font-size: clamp(28px, 7vw, 34px); }
   .reliquary-caption p { margin-top: 10px; font-size: 13px; }
-  .reliquary-footer { padding-right: 130px; }
-  .reliquary-footer-note { display: none; }
-  .reliquary-footer nav { gap: 11px; }
-  .reliquary-footer button { font-size: 12px; }
-  body.is-home-page .play-chip { right: 20px; bottom: 20px; font-size: 11px; }
+  .reliquary-footer { display: none; }
 }
 @media (hover: none) {
   .reliquary-desktop-hint { display: none; }
