@@ -171,6 +171,11 @@ body.is-about-page .about-content-card h1::after { content: "."; color: #c6b2e6;
 body.is-about-page .about-content-card p { max-width: 530px; color: var(--interior-soft); font-size: 17px; line-height: 1.75; }
 body.is-about-page .about-content-card p + p { margin-top: 20px; }
 body.is-about-page .about-content-card strong { color: #eeebf2; font-weight: 500; }
+body.is-about-page .about-layout.about-layout--text-only {
+  display: block;
+  max-width: 760px;
+}
+body.is-about-page .about-layout--text-only .about-content-card p { max-width: 640px; }
 body.is-about-page .about-photo-card {
   position: relative;
   display: block;
