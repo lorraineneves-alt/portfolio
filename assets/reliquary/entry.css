@@ -245,18 +245,20 @@ body.is-home-page .home-view { display: block; }
 .reliquary-glass-reflections { opacity: .72; transition: opacity .4s; }
 .reliquary-object:hover .reliquary-glass-reflections,
 .reliquary-object:focus-visible .reliquary-glass-reflections { opacity: 1; }
-.reliquary-star {
+.reliquary-sparkle {
   position: absolute;
   z-index: 2;
   display: block;
+  height: auto;
   overflow: visible;
   pointer-events: none;
-  filter: drop-shadow(2px 5px 3px rgba(0, 0, 0, .46)) drop-shadow(0 -1px 2px rgba(223, 193, 249, .16));
+  user-select: none;
+  filter: drop-shadow(0 0 5px rgba(223, 193, 249, .14));
   animation: reliquary-glint 5s ease-in-out infinite;
 }
-.reliquary-star-one { top: 29%; left: 14%; width: 44px; transform: rotate(12deg); }
-.reliquary-star-two { top: 23%; right: 16%; width: 30px; transform: rotate(-9deg); animation-delay: -1.6s; }
-.reliquary-star-three { right: 11%; bottom: 25%; width: 58px; transform: rotate(8deg); animation-delay: -3s; }
+.reliquary-sparkle-one { top: 29%; left: 14%; width: 28px; }
+.reliquary-sparkle-two { top: 23%; right: 16%; width: 18px; animation-delay: -1.6s; }
+.reliquary-sparkle-three { right: 11%; bottom: 25%; width: 24px; animation-delay: -3s; }
 .reliquary-caption {
   position: relative;
   z-index: 2;
@@ -329,9 +331,9 @@ body.is-home-page .spotify-panel {
   .reliquary-center { padding: 14px 0 24px; }
   .reliquary-stage { width: calc(100vw - 16px); height: min(520px, 104vw, 64svh); }
   .reliquary-float { width: min(470px, 91vw, 62svh); }
-  .reliquary-star-one { left: 7%; top: 24%; width: 30px; }
-  .reliquary-star-two { top: 19%; right: 9%; width: 23px; }
-  .reliquary-star-three { right: 3%; bottom: 19%; width: 40px; }
+  .reliquary-sparkle-one { left: 7%; top: 24%; width: 20px; }
+  .reliquary-sparkle-two { top: 19%; right: 9%; width: 14px; }
+  .reliquary-sparkle-three { right: 3%; bottom: 19%; width: 18px; }
   .reliquary-ground { right: 20%; left: 20%; }
   .reliquary-caption { margin-top: -4px; }
   .reliquary-caption-title { font-size: clamp(28px, 7vw, 34px); }
