@@ -3945,7 +3945,7 @@
     }
 
   </style>
-  <link rel="stylesheet" href="assets/reliquary/entry.css?v=20261027-chrome-cursor-1">
+  <link rel="stylesheet" href="assets/reliquary/entry.css?v=20261103-chrome-navigation-1">
   <link rel="stylesheet" href="assets/reliquary/interior.css?v=20261030-mosaic-balanced-1">
 </head>
 <body class="is-home-page">
@@ -3970,7 +3970,27 @@
             <a class="reliquary-wordmark" href="#canvas" data-page="home" aria-label="Lorraine — início">
               <span class="brand-logo-crop" aria-hidden="true"><img class="brand-logo" src="assets/reliquary/lorraine-pink-chrome-logo.png" alt="" draggable="false"></span>
             </a>
-            <button class="reliquary-skip" type="button" data-page="works">Ir para os trabalhos <span aria-hidden="true">↗</span></button>
+            <button class="reliquary-skip" type="button" data-page="works">
+              Ir para os trabalhos
+              <svg class="reliquary-skip-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="reliquarySkipChrome" x1="4" y1="3" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#fff8fc" />
+                    <stop offset=".23" stop-color="#e5dce9" />
+                    <stop offset=".4" stop-color="#8a8195" />
+                    <stop offset=".51" stop-color="#fff" />
+                    <stop offset=".68" stop-color="#d4c9de" />
+                    <stop offset=".83" stop-color="#756b83" />
+                    <stop offset="1" stop-color="#e9d9ef" />
+                  </linearGradient>
+                </defs>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m5.5 18.5 12.5-12.5M7.5 6H18v10.5" stroke="#514758" stroke-width="4.4" />
+                  <path d="m5.5 18.5 12.5-12.5M7.5 6H18v10.5" stroke="url(#reliquarySkipChrome)" stroke-width="3.2" />
+                  <path d="m5.4 17.8 11.8-11.8M8 5.4h9.4" stroke="#fff7fc" stroke-opacity=".85" stroke-width=".7" />
+                </g>
+              </svg>
+            </button>
           </header>
 
           <div class="reliquary-center">

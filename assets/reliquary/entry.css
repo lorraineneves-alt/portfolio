@@ -109,7 +109,7 @@ body.is-home-page .home-view { display: block; }
   display: inline-flex;
   min-height: 42px;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
   padding: 0 17px;
   border: 1px solid rgba(220, 200, 235, .18);
   border-radius: 999px;
@@ -120,7 +120,14 @@ body.is-home-page .home-view { display: block; }
   cursor: pointer;
   transition: border-color .2s, background .2s, color .2s;
 }
-.reliquary-skip > span { color: #d5c2e9; font-size: 17px; }
+.reliquary-skip-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  overflow: visible;
+  filter: drop-shadow(0 1px 1px rgba(12, 8, 17, .4));
+}
 .reliquary-skip:hover { border-color: #8b739c; background: rgba(202, 168, 233, .07); color: #fff; }
 .reliquary-entry button:focus-visible,
 .reliquary-entry a:focus-visible { outline: 2px solid #cfb4e9; outline-offset: 5px; }
@@ -334,7 +341,7 @@ body.is-home-page .play-chip > span { color: #baa1d0; }
   .reliquary-wordmark .brand-logo-crop { width: 80px; height: 54px; }
   .reliquary-wordmark .brand-logo { top: -17.2px; left: -2.6px; width: 84.4px; height: 84.4px; }
   .reliquary-skip { min-height: 38px; gap: 9px; padding: 0 12px; font-size: 9px; }
-  .reliquary-skip > span { font-size: 15px; }
+  .reliquary-skip-icon { width: 18px; height: 18px; }
   .reliquary-center { padding: 14px 0 24px; }
   .reliquary-stage { width: calc(100vw - 16px); height: min(520px, 104vw, 64svh); }
   .reliquary-float { width: min(470px, 91vw, 62svh); }
