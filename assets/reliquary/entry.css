@@ -96,31 +96,48 @@ body.is-home-page .home-view { display: block; }
   -webkit-user-drag: none;
 }
 .reliquary-skip {
+  position: relative;
   display: inline-flex;
   min-height: 44px;
   align-items: center;
-  gap: 14px;
-  padding: 0 17px;
-  border: 1px solid rgba(220, 200, 235, .18);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, .015);
+  gap: 8px;
+  padding: 4px 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: #ded3e7;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: -.01em;
   line-height: 1.35;
+  text-decoration: none;
   cursor: pointer;
-  transition: border-color .2s, background .2s, color .2s;
+  transition: color .2s;
+}
+.reliquary-skip::after {
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #9a8fa5, #eee4f4 56%, #b3a5bf);
+  opacity: .6;
+  content: "";
+  pointer-events: none;
+  transition: opacity .2s, box-shadow .2s;
 }
 .reliquary-skip-icon {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   flex: 0 0 auto;
   overflow: visible;
   filter: drop-shadow(0 1px 1px rgba(12, 8, 17, .4));
 }
-.reliquary-skip:hover { border-color: #8b739c; background: rgba(202, 168, 233, .07); color: #fff; }
+.reliquary-skip:hover,
+.reliquary-skip:focus-visible { color: #fff7fc; }
+.reliquary-skip:hover::after,
+.reliquary-skip:focus-visible::after { opacity: 1; box-shadow: 0 0 6px rgba(224, 203, 242, .3); }
 .reliquary-entry button:focus-visible,
 .reliquary-entry a:focus-visible { outline: 2px solid #cfb4e9; outline-offset: 5px; }
 .reliquary-center {
@@ -313,8 +330,8 @@ body.is-home-page .spotify-panel {
 @media (max-width: 600px) {
   .reliquary-entry { padding: 22px 20px 18px; }
   .reliquary-wordmark { width: 110px; min-height: 42px; }
-  .reliquary-skip { min-height: 42px; gap: 9px; padding: 0 12px; font-size: 12px; }
-  .reliquary-skip-icon { width: 18px; height: 18px; }
+  .reliquary-skip { gap: 7px; font-size: 12px; }
+  .reliquary-skip-icon { width: 14px; height: 14px; }
   .reliquary-center { padding: 14px 0 24px; }
   .reliquary-stage { width: calc(100vw - 16px); height: min(520px, 104vw, 64svh); }
   .reliquary-float { width: min(470px, 91vw, 62svh); }
