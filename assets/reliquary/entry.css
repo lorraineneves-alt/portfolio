@@ -291,21 +291,11 @@ body.is-home-page .home-view { display: block; }
 .reliquary-caption p {
   margin: 14px 0 0;
   color: #b9adc5;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.65;
   text-wrap: balance;
-}
-.reliquary-hint-ending { white-space: nowrap; }
-.reliquary-hint-icon {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin-left: 4px;
-  overflow: visible;
-  color: #c8b6d5;
-  vertical-align: -.2em;
 }
 .reliquary-touch-hint { display: none; }
 .reliquary-footer { min-height: 34px; justify-content: flex-end; }
@@ -354,7 +344,6 @@ body.is-home-page .spotify-panel {
   .reliquary-caption-title { width: min(360px, calc(100vw - 52px)); }
   .reliquary-caption-title-art { height: 52px; }
   .reliquary-caption p { margin-top: 12px; }
-  .reliquary-hint-icon { width: 16px; height: 16px; }
   .reliquary-footer { display: none; }
 }
 @media (hover: none) {
