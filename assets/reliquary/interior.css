@@ -56,8 +56,10 @@ body.is-interior-page .topbar {
 body.is-case-page .case-page-nav { top: 82px; }
 body.is-interior-page .brand {
   position: relative;
-  flex: 0 0 58px;
-  width: 58px;
+  display: flex;
+  flex: 0 0 96px;
+  align-items: center;
+  width: 96px;
   height: 40px;
   padding: 0;
   border-radius: 12px;
@@ -69,7 +71,7 @@ body.is-interior-page .brand::before {
   position: absolute;
   top: 50%;
   left: 0;
-  width: 58px;
+  width: 96px;
   height: 40px;
   transform: translateY(-50%);
   content: "";
@@ -79,28 +81,6 @@ body.is-interior-page .brand:focus-visible::before {
   border-radius: 14px;
   outline: 3px solid #e7b5f5;
   outline-offset: 2px;
-}
-body.is-interior-page .brand-logo-crop {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  width: 58px;
-  height: 40px;
-  overflow: hidden;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-body.is-interior-page .brand-logo {
-  position: absolute;
-  top: -12.5px;
-  left: -1.9px;
-  display: block;
-  width: 61.2px;
-  height: 61.2px;
-  max-width: none;
-  pointer-events: none;
-  -webkit-user-drag: none;
 }
 body.is-interior-page .top-actions {
   display: flex;

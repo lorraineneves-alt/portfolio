@@ -69,41 +69,39 @@ body.is-home-page .home-view { display: block; }
 }
 .reliquary-wordmark {
   position: relative;
-  display: block;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
   width: 136px;
-  height: 42px;
+  min-height: 46px;
+  border-radius: 8px;
   text-decoration: none;
 }
-.reliquary-wordmark::before,
-.reliquary-wordmark .brand-logo-crop {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 95px;
-  height: 65px;
-  transform: translateY(-50%);
+.reliquary-entry .reliquary-wordmark:focus-visible {
+  outline: 2px solid #cfb4e9;
+  outline-offset: 5px;
 }
-.reliquary-wordmark::before { content: ""; }
-.reliquary-wordmark:focus-visible { outline: none; }
-.reliquary-wordmark:focus-visible::before {
-  border-radius: 14px;
-  outline: 3px solid #e7b5f5;
-  outline-offset: 2px;
-}
-.reliquary-wordmark .brand-logo-crop {
+.brand-signature {
+  position: relative;
   display: block;
+  width: 100%;
+  aspect-ratio: 1190 / 392;
   overflow: hidden;
+  mix-blend-mode: screen;
   pointer-events: none;
 }
-.reliquary-wordmark .brand-logo {
+/* Frame the approved artwork and blend its dark background into the header. */
+.brand-signature img {
   position: absolute;
-  top: -20.4px;
-  left: -3.1px;
+  top: -70.1531%;
+  left: -20.1681%;
   display: block;
-  width: 100.2px;
-  height: 100.2px;
+  width: 140.5042%;
+  height: auto;
   max-width: none;
+  filter: brightness(.9) contrast(1.2);
   pointer-events: none;
+  user-select: none;
   -webkit-user-drag: none;
 }
 .reliquary-skip {
@@ -323,10 +321,7 @@ body.is-home-page .spotify-panel {
 
 @media (max-width: 600px) {
   .reliquary-entry { padding: 22px 20px 18px; }
-  .reliquary-wordmark { width: 90px; height: 38px; }
-  .reliquary-wordmark::before,
-  .reliquary-wordmark .brand-logo-crop { width: 80px; height: 54px; }
-  .reliquary-wordmark .brand-logo { top: -17.2px; left: -2.6px; width: 84.4px; height: 84.4px; }
+  .reliquary-wordmark { width: 110px; min-height: 42px; }
   .reliquary-skip { min-height: 42px; gap: 9px; padding: 0 12px; font-size: 12px; }
   .reliquary-skip-icon { width: 18px; height: 18px; }
   .reliquary-center { padding: 14px 0 24px; }
