@@ -3946,10 +3946,10 @@
 
   </style>
   <link rel="stylesheet" href="assets/reliquary/entry.css?v=20261103-hint-12px-1">
-  <link rel="stylesheet" href="assets/reliquary/interior.css?v=20261103-more-handwritten-1">
+  <link rel="stylesheet" href="assets/reliquary/interior.css?v=20261103-metallic-stars-1">
 </head>
 <body class="is-home-page">
-  <!-- All portfolio stars use assets/reliquary/chrome-star-3d.png and .portfolio-chrome-star. -->
+  <!-- Default chrome ornaments share assets/reliquary/metallic-four-point-star.svg. -->
   <main class="site-shell">
     <div class="interior-backdrop" aria-hidden="true"></div>
     <header class="topbar">
@@ -4214,9 +4214,9 @@
                   </button>
                 </div>
               </div>
-              <img class="reliquary-sparkle reliquary-sparkle-one" aria-hidden="true" src="assets/reliquary/delicate-sparkle.svg" alt="" draggable="false">
-              <img class="reliquary-sparkle reliquary-sparkle-two" aria-hidden="true" src="assets/reliquary/delicate-sparkle.svg" alt="" draggable="false">
-              <img class="reliquary-sparkle reliquary-sparkle-three" aria-hidden="true" src="assets/reliquary/delicate-sparkle.svg" alt="" draggable="false">
+              <img class="reliquary-sparkle reliquary-sparkle-one" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
+              <img class="reliquary-sparkle reliquary-sparkle-two" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
+              <img class="reliquary-sparkle reliquary-sparkle-three" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
             </div>
             <div class="reliquary-caption">
               <span class="reliquary-caption-title"><span class="reliquary-sr-only">Meu pequeno universo.</span><img class="reliquary-caption-title-art" src="assets/reliquary/small-universe-handwritten.svg" width="1573" height="273" alt="" aria-hidden="true" draggable="false"></span>
@@ -4242,8 +4242,8 @@
         </div>
         <section class="beliefs-card" aria-labelledby="beliefsTitle">
           <div class="belief-doodles" aria-hidden="true">
-            <img class="portfolio-chrome-star belief-star-small" aria-hidden="true" src="assets/reliquary/chrome-star-3d.png" alt="" draggable="false">
-            <img class="portfolio-chrome-star belief-star-large" aria-hidden="true" src="assets/reliquary/chrome-star-3d.png" alt="" draggable="false">
+            <img class="portfolio-chrome-star belief-star-small" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
+            <img class="portfolio-chrome-star belief-star-large" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
           </div>
           <header class="beliefs-heading">
             <h2 id="beliefsTitle"><span class="reliquary-sr-only">No que eu acredito</span><img class="beliefs-title-art" src="assets/reliquary/beliefs-handwritten.svg" width="1581" height="274" alt="" aria-hidden="true" draggable="false"></h2>
@@ -4313,7 +4313,7 @@
         </button>
         <span class="tool-divider" aria-hidden="true"></span>
         <button class="tool-button" id="stickerToggle" type="button" aria-label="Abrir adesivos" aria-expanded="false" title="Adesivos">
-          <img class="toolbar-icon portfolio-chrome-star" aria-hidden="true" src="assets/reliquary/chrome-star-3d.png" alt="" draggable="false">
+          <img class="toolbar-icon portfolio-chrome-star" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">
         </button>
         <button class="tool-button" id="commentsButton" type="button" aria-label="Adicionar balão de comentário" aria-pressed="false" title="Balão de comentário">
           <svg class="toolbar-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.1 6.3c0-1 .8-1.8 1.8-1.8h10.2c1 0 1.8.8 1.8 1.8v8.1c0 1-.8 1.8-1.8 1.8h-4.6l-5.3 3.4v-3.4h-.3c-1 0-1.8-.8-1.8-1.8V6.3Z" /></svg>
@@ -5144,7 +5144,7 @@
       </div>
     </section>
     <section class="contact-view" id="contactView" aria-labelledby="contactTitle" aria-hidden="true">
-      <img class="portfolio-chrome-star contact-star" src="assets/reliquary/chrome-star-3d.png" alt="" aria-hidden="true" draggable="false">
+      <img class="portfolio-chrome-star contact-star" src="assets/reliquary/metallic-four-point-star.svg" alt="" aria-hidden="true" draggable="false">
       <p class="contact-kicker">Contato</p>
       <h1 id="contactTitle">Vamos conversar<span>?</span></h1>
       <p>Uma ideia, um projeto ou uma boa troca.<br>Você pode me encontrar no Slack.</p>
@@ -5650,7 +5650,7 @@
       sparkle.style.left = `${x + (Math.random() - .5) * 14}px`;
       sparkle.style.top = `${y + (Math.random() - .5) * 12}px`;
       sparkle.style.setProperty("--sparkle-size", `${size}px`);
-      sparkle.innerHTML = '<img class="portfolio-chrome-star" aria-hidden="true" src="assets/reliquary/chrome-star-3d.png" alt="" draggable="false">';
+      sparkle.innerHTML = '<img class="portfolio-chrome-star" aria-hidden="true" src="assets/reliquary/metallic-four-point-star.svg" alt="" draggable="false">';
       document.body.appendChild(sparkle);
       sparkle.addEventListener("animationend", () => sparkle.remove(), { once: true });
     }
